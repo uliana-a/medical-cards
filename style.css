@@ -1,0 +1,158 @@
+body {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Muli', sans-serif;
+    color: #1d333a;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1200px; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.card {
+    margin: 20px;  
+    width: 350px;
+    height: fit-content;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px #00000021, 0 2px 4px #00000052;
+}
+
+.card:hover {
+    box-shadow: 0 20px 40px #00000025;
+    cursor: pointer;
+}
+
+.card > * {
+    margin: 20px;
+}
+
+.card-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.date {
+    font-size: 28px;
+    font-weight: 900;
+}
+
+ul {
+    list-style: none;
+    padding: 0%;
+    margin: 0;
+}
+
+li {
+    display: grid;
+    grid-template-areas: 
+        "icon text";
+    grid-column-gap: 15px;
+    grid-template-columns: 20px auto;
+    margin-bottom: 5px;
+}
+
+li::before {
+    grid-area: icon;
+    content: "\f058";
+    font-family: FontAwesome;
+    color: #0079db;
+    font-size: 20px;
+}
+
+li span {
+    display: flex;
+    align-items: center;
+    grid-area: text;
+    vertical-align: middle;
+}
+
+.status {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 3px solid white;
+    text-align: center;
+    line-height: 4rem;
+    background-color: white;
+    padding: 4px;
+    margin: 0;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.pending {
+    background-color: #f8aaaa;
+    color: #5f2539;
+}
+
+.submitted {
+    background-color: #97dcb0;
+    color: #204c03;
+}
+
+.paid {
+    background-color: #ffe48e;
+    color: #554500;
+}
+
+.recipients {
+    background-color: #eff3f5;
+    padding: 10px;
+    border-radius: 20px;
+    border: 3px solid white;
+}
+
+.recipients i {
+    font-size: 20px;
+    margin-right: 5px;
+    color: #5a6468;
+}
+
+.recipients span {
+    vertical-align: middle;
+}
+
+.sub-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -10%;
+    font-size: 0.8rem;
+}
+
+i {
+    margin-right: 15px;
+    font-size: 20px;
+    color: #0079db;
+    vertical-align: middle;
+    display: inline-block;
+    position:relative;
+    top:-.1em;
+  }
+
+.label {
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+.footer {
+    margin: 0;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #eff3f5;
+}
